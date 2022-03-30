@@ -4,6 +4,13 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
+  /* variaveis de cores */
+  --green: #3c735f;
+  --yellow: #f2cb05;
+  --orange: #f2a922;
+  --white: #dadada;
+  --black: #212121;
 }
 
 main {
@@ -29,4 +36,15 @@ main {
   width: 100%;
   height: 4rem;
   margin-bottom: 2rem;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 6rem;
+  background: var(--orange);
 }
