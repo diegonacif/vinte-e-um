@@ -8,17 +8,22 @@ const player1Result = localStorage.getItem("result1");
 const player2Result = localStorage.getItem("result2");
 
 function setNames() {  
-  if (result1 === null || result1 === undefined) {
-    return result1.innerHTML = 0
-  } else if (result2 === null || result2 === undefined) {
-    return result2.innerHTML = 0
-  } else {
+  if (player1Result === null) {
+    return (
+      player1.innerHTML = player1Name,
+      player2.innerHTML = player2Name,
+      result1.innerHTML = 0,
+      result2.innerHTML = player2Result
+    )
+  } if (player2Result === null) {
     return (
       player1.innerHTML = player1Name,
       player2.innerHTML = player2Name,
       result1.innerHTML = player1Result,
-      result2.innerHTML = player2Result
+      result2.innerHTML = 0
     )
+  } else {
+    return alert("erro em SetNames()")
   }
 };
 window.onload = setNames();
@@ -28,4 +33,4 @@ function newGame() {
     localStorage.clear(),
     window.location.replace("http://127.0.0.1:5500/index.html")
   )
-}
+};
