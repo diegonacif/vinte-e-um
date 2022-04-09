@@ -16,7 +16,7 @@ window.onload = setNames();
 function stopGame() {
   return (
     localStorage.setItem("result2" ,resultSpan.innerHTML),
-    window.location.replace("http://127.0.0.1:5500/pages/gameover/gameover.html")
+    window.location.replace(`${window.location.origin}/pages/gameover/gameover.html`)
   )  
 }
 
@@ -26,7 +26,7 @@ function endGame() {
   } else {
     return (
       localStorage.setItem("result2" ,resultSpan.innerHTML),
-      window.location.replace("http://127.0.0.1:5500/pages/gameover/gameover.html")
+      window.location.replace(`${window.location.origin}/pages/gameover/gameover.html`)
     )
   }
 };

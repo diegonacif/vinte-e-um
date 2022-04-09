@@ -16,7 +16,7 @@ window.onload = setNames();
 function stopGame() {
   return (
     localStorage.setItem("result1" ,resultSpan.innerHTML),
-    window.location.replace("http://127.0.0.1:5500/pages/player2/player2.html")
+    window.location.replace(`${window.location.origin}/pages/player2/player2.html`)
   )
 };
 
@@ -26,7 +26,7 @@ function endGame() {
   } else {
     return (
     localStorage.setItem("result1" ,resultSpan.innerHTML),
-    window.location.replace("http://127.0.0.1:5500/pages/gameover/gameover.html")
+    window.location.replace(`${window.location.origin}/pages/player2/player2.html`)
     )
   }
 };
