@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* variaveis de cores */
+  --green: #3c735f;
+  --yellow: #f2cb05;
+  --orange: #f2a922;
+  --white: #dadada;
+  --black: #212121;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url(../../assets/portrait_bg.jpg);
+  background-size: cover;
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5vw;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: var(--black);
+}
+
+#gameOverTitle {
+  color: var(--white);
+}
+
+.mainContainer {
+  position: relative;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  width: 100%;
+  height: 18rem;
+  border-radius: 0.5rem;
+  /* margin: 2rem 0 1rem;
+  padding: 1rem; */
+}
+
+.playerWp {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  color: var(--white);
+  font-weight: bold;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  background: var(--orange);
+  font-weight: bold;
+  z-index: 1;
+}
