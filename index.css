@@ -20,7 +20,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
-  background: url(../../assets/portrait_bg.jpg);
+  background: url(./assets/portrait_bg.jpg);
   background-size: cover;
   transition: background 0.5s ease;
 }
@@ -110,6 +110,7 @@ button:active {
   border: 0;
 }
 
+/* LANDSCAPE SCREEN */
 @media only screen and (min-width: 550px) {
   .mainContainer {
     background: url(./assets/poker_table_wide_bg.jpg);
@@ -129,5 +130,10 @@ button:active {
     height: calc(5rem + 2vw);
     width: calc(5rem + 2vw);    
     font-size: calc(1.2rem + 0.5vw);    
+  }
+
+  button:hover {
+    filter: brightness(0.8);
+    transition: filter 0.3s;
   }
 }
