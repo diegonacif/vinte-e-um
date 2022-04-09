@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twenty One Game (test)</title>
+  <title>Twenty One Game</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <main>
-    <h1>Twenty One Game</h1>
-    <div class="container">
+    <div class="mainContainer">
       <div class="playerWp">
-        <label>Nome do jogador 1</label>
+        <span>Jogador 1</span>
         <input id="player1" type="text">
       </div>
       <div class="playerWp">
-        <label>Nome do jogador 2</label>
+        <span>Jogador 2</span>
         <input id="player2" type="text">
       </div>
+      <a href="./pages/player1/player1.html">
+        <button onclick="nameStorage()">21<br>Game</button>
+      </a>
+      <div class="line"></div>
     </div>
-    <a href="./pages/player1/player1.html">
-      <button onclick="nameStorage()">Iniciar jogo</button>
-    </a>
   </main>
   <script src="index.js"></script>
 </body>

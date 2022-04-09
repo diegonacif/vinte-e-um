@@ -15,7 +15,7 @@ function setNames() {
       result1.innerHTML = 0,
       result2.innerHTML = player2Result
     )
-  } if (player2Result === null) {
+  } else if (player2Result === null) {
     return (
       player1.innerHTML = player1Name,
       player2.innerHTML = player2Name,
@@ -23,7 +23,12 @@ function setNames() {
       result2.innerHTML = 0
     )
   } else {
-    return alert("erro em SetNames()")
+    return (
+      player1.innerHTML = player1Name,
+      player2.innerHTML = player2Name,
+      result1.innerHTML = player1Result,
+      result2.innerHTML = player2Result
+    )
   }
 };
 window.onload = setNames();

@@ -1,6 +1,28 @@
 * {
   margin: 0;
   padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* variaveis de cores */
+  --green: #3c735f;
+  --yellow: #f2cb05;
+  --orange: #f2a922;
+  --white: #dadada;
+  --black: #212121;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url(../../assets/portrait_bg.jpg);
+  background-size: cover;
+  transition: background 0.5s ease;
 }
 
 main {
@@ -8,16 +30,104 @@ main {
   flex-direction: column;
   padding: 3rem 5vw;
   align-items: center;
+  row-gap: 1rem;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-  margin: 3rem 0;
+input {
+  width: 90%;
+  max-width: 10rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  justify-self: center;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+span {
+  justify-self: center;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: var(--black);
+}
+
+.mainContainer {
+  position: relative;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: center;
+  background: url(./assets/poker_table_bg.jpg);
+  background-size: cover;
+  max-width: 50rem;
+  width: 100%;
+  min-width: 18rem;
+  height: 18rem;
+  border-radius: 0.5rem;
+  transition: background 0.5s ease-in-out;
+  /* margin: 2rem 0 1rem;
+  padding: 1rem; */
 }
 
 .playerWp {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  background: var(--orange);
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+button:active {
+  filter: brightness(0.7);
+  border: 0;
+}
+
+@media only screen and (min-width: 550px) {
+  .mainContainer {
+    background: url(./assets/poker_table_wide_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    transition: background 0.5s ease;
+  }
+
+  body {    
+    background: url(./assets/landscape_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    transition: background 0.5s ease;
+  }
+
+  button {    
+    height: calc(5rem + 2vw);
+    width: calc(5rem + 2vw);    
+    font-size: calc(1.2rem + 0.5vw);    
+  }
 }
