@@ -22,7 +22,9 @@ function stopGame() {
 
 function endGame() {  
   if (resultSpan.innerHTML <= 21) {
-    return;
+    return (
+      console.log(window.location.origin, window.location.hostname, window.location.pathname)
+    );
   } else {
     return (
     localStorage.setItem("result1" ,resultSpan.innerHTML),
