@@ -10,15 +10,18 @@ if (window.location.origin === "http://127.0.0.1:5500") {
 }
 
 function nameStorage() {
-  if (player1.value !== "" && player2.value !== "") {
+  if (player1.value === player2.value && player1.value !== "" 
+  && player2.value !== "") {
+    return alert("Nomes dos jogadores precisam ser diferentes!")
+  } else if (player1.value !== "" && player2.value !== "") {
     return (
       localStorage.clear(),
       localStorage.setItem("name1", player1.value),
       localStorage.setItem("name2", player2.value),
       window.location.replace(`${window.location.origin}${url}`),
       console.log(player1.value, player2.value)
-    )
-  } else {
+      )
+    } else {
     return alert("Insira os nomes dos jogadores!")
-  }
+    }
 };
