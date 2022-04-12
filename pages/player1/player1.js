@@ -6,14 +6,21 @@ const player1Name = localStorage.getItem("name1")
 const player2Name = localStorage.getItem("name2")
 const min = Math.ceil(1);
 const max = Math.floor(13);
-/* const url = {
-   player2: "/pages/player2/player2.html",
-   gameover: "/pages/gameover/gameover.html"
-} */
-const url = {
-  player2: "/vinte-e-um/pages/player2/player2.html",
-  gameover: "/vinte-e-um/pages/gameover/gameover.html"
+
+// URL DINAMICA
+let url;
+if (window.location.origin === "http://127.0.0.1:5500") {  
+  url = {   // URL DESENVOLVIMENTO
+    player2: "/pages/player2/player2.html",
+    gameover: "/pages/gameover/gameover.html"
+  }
+} else if (window.location.origin === "https://diegonacif.github.io") {
+  url = {   // URL PRODUÇÃO
+    player2: "/vinte-e-um/pages/player2/player2.html",
+    gameover: "/vinte-e-um/pages/gameover/gameover.html"
+  }
 }
+
 let cardsArray = []
 
 function setNames() {
@@ -39,7 +46,7 @@ function endGame() {
   }
 };
 
-function addCard () {  
+function addCard() {  
   let randomNum = Math.floor(Math.random() * (max - min + 1)) + min // criando numero randomico
   cardsArray.push(randomNum)
   

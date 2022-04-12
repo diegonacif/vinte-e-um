@@ -14,8 +14,13 @@ const player2Result = localStorage.getItem("result2");
 const player1Div = document.getElementById("player1Div");
 const player2Div = document.getElementById("player2Div");
 
-// const url = "/index.html"
-const url = "/vinte-e-um/index.html"
+// URL DINAMICA
+let url;
+if (window.location.origin === "http://127.0.0.1:5500") {  
+  url = "/index.html"; // URL DESENVOLVIMENTO
+} else if (window.location.origin === "https://diegonacif.github.io") {
+  url = "/vinte-e-um/index.html"; //URL PRODUÇÃO
+}
 
 function setNames() {  
   if (player1Result === null) {
