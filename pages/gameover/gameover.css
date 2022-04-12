@@ -9,8 +9,10 @@
   --green: #3c735f;
   --yellow: #f2cb05;
   --orange: #f2a922;
+  --red: #a62f26;
   --white: #dadada;
   --black: #212121;
+  --gray: #4b4b4b;
 }
 
 body {
@@ -22,7 +24,8 @@ body {
   min-width: 100vw;
   background: url(../../assets/portrait_bg.jpg);
   background-size: cover;
-  
+  background-position: center center;
+  transition: background 0.5s ease;  
 }
 
 main {
@@ -53,7 +56,8 @@ main {
   grid-template-columns: 100%;
   align-items: center;
   justify-content: center;
-  background: var(--green);
+  /* background: var(--green); */
+  max-width: 60rem;
   width: 100%;
   height: 18rem;
   border-radius: 0.5rem;
@@ -71,6 +75,18 @@ main {
   color: var(--white);
   font-weight: bold;
   font-size: 1.3rem;
+  background: var(--gray);
+}
+
+#player1Div {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+#player2Div {
+  border-radius:  0 0 0.5rem 0.5rem;
+}
+
+.winner {
+  background: var(--green);
 }
 
 button {
@@ -88,4 +104,46 @@ button {
   background: var(--orange);
   font-weight: bold;
   z-index: 1;
+}
+
+/* LANDSCAPE SCREEN */
+@media only screen and (min-width: 550px) {
+  .mainContainer {
+    height: calc(18rem + 4vw);
+  }
+
+  body {    
+    background: url(../../assets/landscape_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    transition: background 0.5s ease;
+  }
+
+  button {    
+    height: calc(5rem + 2vw);
+    width: calc(5rem + 2vw);    
+    font-size: calc(1.2rem + 0.5vw);    
+  }
+
+  button:hover {
+    filter: brightness(0.8);
+    transition: filter 0.3s;
+    cursor: pointer;
+  }
+
+  .playerWp:hover {
+    filter: brightness(1.05);
+  }
+
+  span {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+
+  .winner span {
+    font-size: calc(2rem + 0.5vw);
+  }
+
+  input {
+    font-size: calc(0.6rem + 0.5vw);
+  }
 }
