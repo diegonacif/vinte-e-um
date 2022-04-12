@@ -6,7 +6,7 @@ let url;
 if (window.location.origin === "http://127.0.0.1:5500") {  
   url = "/pages/player1/player1.html"; // URL DESENVOLVIMENTO
 } else if (window.location.origin === "https://diegonacif.github.io") {
-  url = "/vinte-e-um/pages/player2/player2.html"; //URL PRODUÇÃO
+  url = "/vinte-e-um/pages/player1/player1.html"; //URL PRODUÇÃO
 }
 
 function nameStorage() {
