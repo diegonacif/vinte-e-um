@@ -9,17 +9,17 @@ const max = Math.floor(13);
 
 // URL DINAMICA
 let url;
-if (window.location.origin === "http://127.0.0.1:5500") {  
-  url = {   // URL DESENVOLVIMENTO
-    player2: "/pages/player2/player2.html",
-    gameover: "/pages/gameover/gameover.html"
-  }
-} else if (window.location.origin === "https://diegonacif.github.io") {
+if (window.location.origin === "https://diegonacif.github.io") {
   url = {   // URL PRODUÇÃO
     player2: "/vinte-e-um/pages/player2/player2.html",
     gameover: "/vinte-e-um/pages/gameover/gameover.html"
   }
-}
+} else {  
+  url = {   // URL DESENVOLVIMENTO
+    player2: "/pages/player2/player2.html",
+    gameover: "/pages/gameover/gameover.html"
+  }
+} 
 
 let cardsArray = []
 

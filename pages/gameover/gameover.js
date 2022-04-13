@@ -16,10 +16,10 @@ const player2Div = document.getElementById("player2Div");
 
 // URL DINAMICA
 let url;
-if (window.location.origin === "http://127.0.0.1:5500") {  
-  url = "/index.html"; // URL DESENVOLVIMENTO
-} else if (window.location.origin === "https://diegonacif.github.io") {
+if (window.location.origin === "https://diegonacif.github.io") {
   url = "/vinte-e-um/index.html"; //URL PRODUÇÃO
+} else {  
+  url = "/index.html"; // URL DESENVOLVIMENTO
 }
 
 function setNames() {  

@@ -9,10 +9,10 @@ const max = Math.floor(13);
 
 // URL DINAMICA
 let url;
-if (window.location.origin === "http://127.0.0.1:5500") {  
-  url = "/pages/gameover/gameover.html"; // URL DESENVOLVIMENTO
-} else if (window.location.origin === "https://diegonacif.github.io") {
+if (window.location.origin === "https://diegonacif.github.io") {
   url = "/vinte-e-um/pages/gameover/gameover.html"; //URL PRODUÇÃO
+} else {  
+  url = "/pages/gameover/gameover.html"; // URL DESENVOLVIMENTO
 }
 
 let cardsArray = []

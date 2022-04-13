@@ -3,10 +3,10 @@ const player2 = document.getElementById('player2');
 
 // URL DINAMICA
 let url;
-if (window.location.origin === "http://127.0.0.1:5500") {  
-  url = "/pages/player1/player1.html"; // URL DESENVOLVIMENTO
-} else if (window.location.origin === "https://diegonacif.github.io") {
+if (window.location.origin === "https://diegonacif.github.io") {
   url = "/vinte-e-um/pages/player1/player1.html"; //URL PRODUÇÃO
+} else {  
+  url = "/pages/player1/player1.html"; // URL DESENVOLVIMENTO
 }
 
 function nameStorage() {

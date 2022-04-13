@@ -65,6 +65,7 @@ span {
   justify-content: center;
   background: url(./assets/poker_table_bg.jpg);
   background-size: cover;
+  background-position: center center;
   max-width: 50rem;
   width: 100%;
   min-width: 18rem;
