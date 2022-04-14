@@ -1,5 +1,24 @@
 const player1 = document.getElementById('player1');
 const player2 = document.getElementById('player2');
+const startBtn = document.getElementById('startBtn');
+
+// LISTENERS DOS INPUTS
+document.getElementById("player1").oninput = () => {
+  filledInput()
+};
+document.getElementById("player2").oninput = () => {
+  filledInput()
+};
+
+// ATIVAÇÃO DO ESTILO DO BOTÃO
+function filledInput() {
+  console.log(player1.value)
+  if (player1.value === "" || player2.value === "") {
+    return startBtn.className = "startBtn-inactive"
+  } else {
+    return startBtn.className = "startBtn-active"
+  }
+}
 
 // URL DINAMICA
 let url;

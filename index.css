@@ -72,8 +72,7 @@ span {
   height: 18rem;
   border-radius: 0.5rem;
   transition: background 0.5s ease-in-out;
-  /* margin: 2rem 0 1rem;
-  padding: 1rem; */
+  
 }
 
 .playerWp {
@@ -88,7 +87,27 @@ span {
   font-size: 1rem;
 }
 
-button {
+button.startBtn-inactive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  background: gray;
+  color: rgb(87, 87, 87);
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+button.startBtn-active {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -101,9 +120,11 @@ button {
   height: 5rem;
   width: 5rem;
   background: var(--orange);
+  color: var(--black);
   font-size: 1.2rem;
   font-weight: bold;
   z-index: 1;
+  transition: all 0.5s;
 }
 
 button:active {
