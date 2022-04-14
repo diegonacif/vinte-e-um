@@ -149,7 +149,7 @@ button:active {
     transition: background 0.5s ease;
   }
 
-  button {    
+  button.startBtn-inactive, button.startBtn-active {    
     height: calc(5rem + 2vw);
     width: calc(5rem + 2vw);    
     font-size: calc(1.2rem + 0.5vw);    
