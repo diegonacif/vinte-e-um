@@ -7,6 +7,7 @@
 
   /* variaveis de cores */
   --green: #3c735f;
+  --green-t: rgba(60, 115, 95, 0.9);
   --yellow: #f2cb05;
   --orange: #f2a922;
   --white: #dadada;
@@ -34,7 +35,7 @@ main {
 }
 
 input {
-  width: 90%;
+  width: 70%;
   max-width: 10rem;
   height: 2rem;
   border-radius: 0.3rem;
@@ -80,11 +81,20 @@ span {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   color: var(--white);
   font-weight: bold;
   font-size: 1rem;
+}
+
+.inputWp {
+  display: flex;
+  justify-self: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 button.startBtn-inactive {
@@ -130,6 +140,16 @@ button.startBtn-active {
 button:active {
   filter: brightness(0.7);
   border: 0;
+}
+
+button.closeBtn {
+  width: 1.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  font-weight: bold;
 }
 
 /* LANDSCAPE SCREEN */

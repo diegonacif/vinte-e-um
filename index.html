@@ -12,19 +12,33 @@
     <div class="mainContainer">
       <div class="playerWp">
         <span>Jogador 1</span>
-        <input 
-          id="player1"
-          type="text"
-          placeholder="Insira o nome"
-        >
+        <div class="inputWp">
+          <input 
+            id="player1"
+            type="text"
+            placeholder="Insira o nome"
+          >
+          <button 
+            class="closeBtn"
+            id="closeBtn1"
+            onclick="clearName1()"
+          >X</button>
+        </div>
       </div>
       <div class="playerWp">
         <span>Jogador 2</span>
-        <input
-          id="player2"
-          type="text"
-          placeholder="Insira o nome"
-        >
+        <div class="inputWp">
+          <input
+            id="player2"
+            type="text"
+            placeholder="Insira o nome"
+          >
+          <button 
+            class="closeBtn"             
+            id="closeBtn2"
+            onclick="clearName2()"
+          >X</button>
+        </div>
       </div>
       <!-- <a href="./pages/player1/player1.html"> -->
         <button 

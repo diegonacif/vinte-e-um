@@ -67,17 +67,15 @@ function whoWon() {
   }
 }
 
-function onLoad() {
-  return (
-    setNames(),
-    whoWon()
-  )
+window.onload = () => {
+  setNames();
+  whoWon();
 }
-window.onload = onLoad();
 
 function newGame() {
   return(
-    localStorage.clear(),
+    localStorage.removeItem('result1'),
+    localStorage.removeItem('result2'),
     window.location.replace(`${window.location.origin}${url}`)
   )
 };
