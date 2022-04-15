@@ -67,9 +67,28 @@ function whoWon() {
   }
 }
 
+function bestGame1() {
+  const resultSpan = document.getElementById('result1');
+  if (resultSpan.innerHTML === '21') {
+    return resultSpan.style.color = 'gold';
+  } else {
+    return;
+  }
+}
+function bestGame2() {
+  const resultSpan = document.getElementById('result2');
+  if (resultSpan.innerHTML === '21') {
+    return resultSpan.style.color = 'gold';
+  } else {
+    return;
+  }
+}
+
 window.onload = () => {
   setNames();
   whoWon();
+  bestGame1();
+  bestGame2();
 }
 
 function newGame() {

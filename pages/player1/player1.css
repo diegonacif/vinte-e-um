@@ -112,6 +112,11 @@ button {
   transition: filter 0.5s;
 }
 
+button:active {
+  filter: brightness(0.7);
+  border: 1px solid #212121;
+}
+
 button#stopBtn {
   border-radius: 0 0 0.5rem 0;
 }
@@ -133,5 +138,9 @@ button#actionBtn {
     background-size: 100% 19rem;
     background-position: center center;
     transition: background 0.5s ease;
+  }
+
+  button:hover {
+    filter: brightness(0.7);
   }
 }
