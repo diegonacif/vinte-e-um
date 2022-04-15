@@ -24,6 +24,7 @@ main {
   background: url("../../assets/portrait_bg.jpg");
   background-size: cover;
   background-position: center center;
+  transition: background 0.5s ease;
 }
 
 .mainContainer {
@@ -51,6 +52,7 @@ main {
   color: var(--white);
   font-size: 2.5rem;
   font-weight: 500;
+  transition: background 0.5s ease;
 }
 
 .headerContainer {
@@ -115,4 +117,21 @@ button#stopBtn {
 }
 button#actionBtn {
   border-radius: 0 0 0 0.5rem;
+}
+
+@media only screen and (min-width: 550px) {
+  main {    
+    background: url(../../assets/landscape_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    transition: background 0.5s ease;
+    max-height: 100vh;
+  }
+
+  .cardsContainer {    
+    background: url("../../assets/poker_table_wide_bg.jpg");
+    background-size: 100% 19rem;
+    background-position: center center;
+    transition: background 0.5s ease;
+  }
 }

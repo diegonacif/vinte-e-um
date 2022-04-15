@@ -33,7 +33,6 @@ main {
   flex-direction: column;
   padding: 3rem 5vw;
   align-items: center;
-  row-gap: 1rem;
 }
 
 .line {
@@ -56,13 +55,11 @@ main {
   grid-template-columns: 100%;
   align-items: center;
   justify-content: center;
-  /* background: var(--green); */
   max-width: 60rem;
   width: 100%;
+  min-width: 18rem;
   height: 18rem;
   border-radius: 0.5rem;
-  /* margin: 2rem 0 1rem;
-  padding: 1rem; */
 }
 
 .playerWp {
@@ -109,7 +106,7 @@ button {
 /* LANDSCAPE SCREEN */
 @media only screen and (min-width: 550px) {
   .mainContainer {
-    height: calc(18rem + 4vw);
+    height: 18rem;
   }
 
   body {    
@@ -117,6 +114,11 @@ button {
     background-size: cover;
     background-position: center center;
     transition: background 0.5s ease;
+    max-height: 100vh;
+  }
+
+  main {
+    padding: 0 5vw;
   }
 
   button {    
