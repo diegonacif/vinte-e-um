@@ -28,6 +28,7 @@ function setNames() {
 };
 window.onload = () => {
   setNames();
+  document.title = player1Name
 }
 
 function stopGame() {

@@ -20,7 +20,10 @@ let cardsArray = []
 function setNames() {
   return player2.innerHTML = player2Name
 };
-window.onload = setNames();
+window.onload = () => {
+  setNames();
+  document.title = player2Name
+}
 
 function stopGame() {
   return (
