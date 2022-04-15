@@ -26,7 +26,9 @@ let cardsArray = []
 function setNames() {
   return player1.innerHTML = player1Name
 };
-window.onload = setNames();
+window.onload = () => {
+  setNames();
+}
 
 function stopGame() {
   return (
@@ -46,6 +48,16 @@ function endGame() {
   }
 };
 
+function bestGame() {
+  const resultSpan = document.getElementById('result');
+
+  if (resultSpan.innerHTML === '21') {
+    return resultSpan.style.color = 'gold';
+  } else {
+    return;
+  }
+}
+
 function addCard() {  
   let randomNum = Math.floor(Math.random() * (max - min + 1)) + min // criando numero randomico
   cardsArray.push(randomNum)
@@ -54,7 +66,8 @@ function addCard() {
     return (
       cardsSpan.innerHTML = cardsArray.toString().replace(/,/g, " - "), // manipulando string
       resultSpan.innerHTML = cardsArray.reduce((a, b) => a + b, 0), // somando itens do array
-      endGame()
+      endGame(),
+      bestGame()
     );
   } else { return; }
 };
