@@ -17,11 +17,11 @@
 body {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
   background: url(./assets/portrait_bg.jpg);
+  background-position: center center;
   background-size: cover;
   transition: background 0.5s ease;
 }
@@ -173,6 +173,11 @@ img {
     background-size: cover;
     background-position: center center;
     transition: background 0.5s ease;
+    max-height: 100vh;
+  }
+
+  main {
+    padding: 0 5vw;
   }
 
   button.startBtn-inactive, button.startBtn-active {    

@@ -18,21 +18,24 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
+  background: url("../../assets/portrait_bg.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 .mainContainer {
   display: grid;
-  grid-template-rows: 5rem auto 4rem;
+  grid-template-rows: 4rem 11rem 3rem;
   grid-template-columns: 100%;
   align-items: center;
   justify-items: center;
-  background: url("../../assets/casino5.jpg");
   max-width: 50rem;
-  width: 100%;
+  width: 90%;
   min-width: 18rem;
-  height: 100%;
+  height: 18rem;
 }
 
 .cardsContainer {
@@ -40,10 +43,11 @@ main {
   justify-content: center;
   align-items: center;
   align-self: center;
-  background: var(--green-t);
-  border-radius: 0.5rem;
-  height: 50%;
-  width: 85%;
+  background: url("../../assets/poker_table_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
   color: var(--white);
   font-size: 2.5rem;
   font-weight: 500;
@@ -57,7 +61,6 @@ main {
   background: rgb(60,115,95);
   background: linear-gradient(45deg, rgba(60,115,95,1) 22%, rgba(34,75,59,1) 50%, rgba(60,115,95,1) 78%);
   color: var(--white);
-  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .header {
@@ -75,10 +78,10 @@ main {
 }
 
 #cardCall {
-  height: 4.1rem;
+  height: 2.9rem;
 }
 #passCall {
-  height: 3.2rem;
+  height: 2.5rem;
   transform: scaleX(-1);
 }
 
@@ -107,7 +110,9 @@ button {
   transition: filter 0.5s;
 }
 
-/* button:hover {
-  filter: brightness(0.8);
-  transition: filter 0.5s;
-} */
+button#stopBtn {
+  border-radius: 0 0 0.5rem 0;
+}
+button#actionBtn {
+  border-radius: 0 0 0 0.5rem;
+}
