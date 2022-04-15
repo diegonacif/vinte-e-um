@@ -148,8 +148,14 @@ button.closeBtn {
   background: transparent;
   color: var(--white);
   font-size: 1.2rem;
-  margin-left: 0.3rem;
+  margin-left: 0.4rem;
   font-weight: bold;
+
+  transition: display 1s ease;
+}
+
+img {
+  display: flex;
 }
 
 /* LANDSCAPE SCREEN */

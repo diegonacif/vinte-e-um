@@ -7,8 +7,8 @@ const result2 = document.getElementById('result2');
 // Importando dados do localstorage
 const player1Name = localStorage.getItem("name1");
 const player2Name = localStorage.getItem("name2");
-const player1Result = localStorage.getItem("result1");
-const player2Result = localStorage.getItem("result2");
+const player1Result = Number(localStorage.getItem("result1"));
+const player2Result = Number(localStorage.getItem("result2"));
 
 // Importando Divs dos players
 const player1Div = document.getElementById("player1Div");
