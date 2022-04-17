@@ -49,9 +49,11 @@ function setNames() {
 
 function whoWon() {
   if ((player1Result < player2Result && player2Result <= 21) || player1Result > 21) {
+    const player1Count = () => {};
+    const player2Count = () => {};
     return (
       console.log(`${player2Name} venceu!`),
-      player2Div.className = `${player2Div.className} winner`
+      player2Div.className = `${player2Div.className} winner`    
     )
   } else if (player1Result === player2Result) {
     return (

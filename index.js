@@ -5,6 +5,8 @@ const startBtn = document.getElementById('startBtn');
 // IMPORTANDO DADOS LOCALSTORAGE
 const player1Name = localStorage.getItem("name1");
 const player2Name = localStorage.getItem("name2");
+const vCount1 = localStorage.getItem("vCount1");
+const vCount2 = localStorage.getItem("vCount2");
 
 // LISTENERS DOS INPUTS
 document.getElementById("player1").oninput = () => {
@@ -106,4 +108,7 @@ window.onload = () => {
   filledInput();
   clearBtn1();
   clearBtn2();
+  () => {
+    console.log(vCount1)
+  }
 };
