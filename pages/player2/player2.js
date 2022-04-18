@@ -28,6 +28,7 @@ window.onload = () => {
 function stopGame() {
   return (
     localStorage.setItem("result2" ,resultSpan.innerHTML),
+    whoWon(),
     window.location.replace(`${window.location.origin}${url}`)
   )  
 }
@@ -38,10 +39,36 @@ function endGame() {
   } else {
     return (
       localStorage.setItem("result2" ,resultSpan.innerHTML),
+      whoWon(),
       window.location.replace(`${window.location.origin}${url}`)
     )
   }
 };
+
+function whoWon() {
+  const player1Result = Number(localStorage.getItem("result1"));
+  const player2Result = Number(localStorage.getItem("result2"));
+  let vCount1 = localStorage.getItem("vCount1");
+  let vCount2 = localStorage.getItem("vCount2");
+
+  if ((player1Result < player2Result && player2Result <= 21) || player1Result > 21) {
+    return (      
+      vCount2++,
+      localStorage.setItem("vCount2", vCount2)
+    )
+  } else if (player1Result === player2Result) {
+    return (
+      console.log("Houve um empate, senhoras e senhores!")
+    )
+  } else if ((player2Result < player1Result && player1Result <= 21) || player2Result > 21) {
+    return (
+      vCount1++,
+      localStorage.setItem("vCount1", vCount1)
+    )
+  } else {
+    return console.log("erro")
+  }
+}
 
 function bestGame() {
   const resultSpan = document.getElementById('result');

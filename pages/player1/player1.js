@@ -2,8 +2,9 @@ const cardsSpan = document.getElementById('cards');
 const resultSpan = document.getElementById('result');
 const actionBtn = document.getElementById('actionBtn');
 const player1 = document.getElementById('player1');
-const player1Name = localStorage.getItem("name1")
-const player2Name = localStorage.getItem("name2")
+const player1Name = localStorage.getItem("name1");
+const player2Name = localStorage.getItem("name2");
+let vCount2 = localStorage.getItem("vCount2")
 const min = Math.ceil(1);
 const max = Math.floor(13);
 
@@ -44,7 +45,9 @@ function endGame() {
   } else {
     return (
     localStorage.setItem("result1" ,resultSpan.innerHTML),
-    window.location.replace(`${window.location.origin}${url.gameover}`)    
+    vCount2++,
+    localStorage.setItem("vCount2" , vCount2),
+    window.location.replace(`${window.location.origin}${url.gameover}`)   
     )
   }
 };

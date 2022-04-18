@@ -12,10 +12,14 @@ const vCount2 = localStorage.getItem("vCount2");
 document.getElementById("player1").oninput = () => {
   filledInput()
   clearBtn1()
+  localStorage.setItem("vCount1", 0)
+  localStorage.setItem("vCount2", 0)
 };
 document.getElementById("player2").oninput = () => {
   filledInput()
   clearBtn2()
+  localStorage.setItem("vCount1", 0)
+  localStorage.setItem("vCount2", 0)
 };
 
 // ATIVAÇÃO DO ESTILO DO BOTÃO
@@ -40,8 +44,7 @@ function nameStorage() {
   && player2.value !== "") {
     return alert("Nomes dos jogadores precisam ser diferentes!")
   } else if (player1.value !== "" && player2.value !== "") {
-    return (
-      localStorage.clear(),
+    return (      
       localStorage.setItem("name1", player1.value),
       localStorage.setItem("name2", player2.value),
       window.location.replace(`${window.location.origin}${url}`)
@@ -69,7 +72,9 @@ function setNames() {
 function clearName1() {
   return (
     localStorage.removeItem('name1'),
-    player1.value = "",
+    localStorage.setItem("vCount1", 0),
+    localStorage.setItem("vCount2", 0),
+    player1.value = "",  
     filledInput(),
     clearBtn1()
   );
@@ -77,6 +82,8 @@ function clearName1() {
 function clearName2() {
   return (
     localStorage.removeItem('name2'),
+    localStorage.setItem("vCount1", 0),
+    localStorage.setItem("vCount2", 0),
     player2.value = "",
     filledInput(),
     clearBtn2()
@@ -108,7 +115,4 @@ window.onload = () => {
   filledInput();
   clearBtn1();
   clearBtn2();
-  () => {
-    console.log(vCount1)
-  }
 };

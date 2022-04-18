@@ -9,6 +9,10 @@ const player1Name = localStorage.getItem("name1");
 const player2Name = localStorage.getItem("name2");
 const player1Result = Number(localStorage.getItem("result1"));
 const player2Result = Number(localStorage.getItem("result2"));
+const vCount1Span = document.getElementById('vCount1Wp');
+const vCount2Span = document.getElementById('vCount2Wp');
+const vCount1 = Number(localStorage.getItem("vCount1"));
+const vCount2 = Number(localStorage.getItem("vCount2"));
 
 // Importando Divs dos players
 const player1Div = document.getElementById("player1Div");
@@ -28,32 +32,36 @@ function setNames() {
       player1.innerHTML = player1Name,
       player2.innerHTML = player2Name,
       result1.innerHTML = 0,
-      result2.innerHTML = player2Result
+      result2.innerHTML = player2Result,
+      vCount1Span.innerHTML = vCount1,
+      vCount2Span.innerHTML = vCount2
     )
   } else if (player2Result === null) {
     return (
       player1.innerHTML = player1Name,
       player2.innerHTML = player2Name,
       result1.innerHTML = player1Result,
-      result2.innerHTML = 0
+      result2.innerHTML = 0,
+      vCount1Span.innerHTML = vCount1,
+      vCount2Span.innerHTML = vCount2
     )
   } else {
     return (
       player1.innerHTML = player1Name,
       player2.innerHTML = player2Name,
       result1.innerHTML = player1Result,
-      result2.innerHTML = player2Result
+      result2.innerHTML = player2Result,
+      vCount1Span.innerHTML = vCount1,
+      vCount2Span.innerHTML = vCount2
     )
   }
 };
 
 function whoWon() {
   if ((player1Result < player2Result && player2Result <= 21) || player1Result > 21) {
-    const player1Count = () => {};
-    const player2Count = () => {};
     return (
       console.log(`${player2Name} venceu!`),
-      player2Div.className = `${player2Div.className} winner`    
+      player2Div.className = `${player2Div.className} winner`
     )
   } else if (player1Result === player2Result) {
     return (
