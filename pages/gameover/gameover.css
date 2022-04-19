@@ -45,8 +45,15 @@ main {
   z-index: 1;
 }
 
-#gameOverTitle {
-  color: var(--white);
+.vLine {
+  position: absolute;
+  top: 0;
+  right: 33.3%;
+  width: 3px;
+  height: 100%;
+  transform: translateX(50%);
+  background-color: var(--black);
+  z-index: 1;
 }
 
 .mainContainer {
@@ -64,37 +71,33 @@ main {
 }
 
 .playerWp {
-  /* position: relative; */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 33.3% 33.3%;
+  justify-items: center;
+  align-items: center;  
   width: 100%;
   height: 100%;
   color: var(--white);
   font-weight: bold;
-  font-size: 1.3rem;
-  background: var(--gray);
+  font-size: 1.5rem;
+  background: rgb(75,75,75);
+  background: linear-gradient(70deg, rgba(75,75,75,1) 15%, rgba(55,55,55,1) 35%, rgba(75,75,75,1) 55%);
 }
 
-.cardWp {
-  position: relative;
-}
+.playerWp #result1, .playerWp #result2 {
+  font-size: 2rem;
+} 
 
 .vCountWp {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -0.7rem;
-  right: -1.9rem;
   color: var(--black);
   background-color: var(--white);
-  width: 1.5rem;
-  height: 2.2rem;
+  width: 2rem;
+  height: 2.6rem;
   border-radius: 0.3rem;
   box-shadow: inset 0 0 0 1px var(--white), inset 0 0 0 3px var(--black);
-  transform: rotate(-10deg);
 }
 
 #player1Div {
@@ -105,14 +108,15 @@ main {
 }
 
 .winner {
-  background: var(--green);
+  background: rgb(60,115,95);
+  background: linear-gradient(70deg, rgba(60,115,95,1) 15%, rgba(35,78,61,1) 35%, rgba(60,115,95,1) 55%);
 }
 
 button {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 33.3%;
+  transform: translate(50%, -50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -123,6 +127,7 @@ button {
   background: var(--orange);
   font-weight: bold;
   z-index: 2;
+  font-size: 1.1rem;
 }
 
 /* LANDSCAPE SCREEN */
@@ -159,13 +164,17 @@ button {
     filter: brightness(1.05);
   }
 
-  span {
-    font-size: calc(1.5rem + 0.5vw);
+  .playerWp #player1, .playerWp #player2 {
+    font-size: 2rem;
   }
 
-  .winner span {
-    font-size: calc(2rem + 0.5vw);
+  .playerWp #result1, .playerWp #result2 {
+    font-size: 2.5rem;
   }
+
+  /* .winner span {
+    font-size: calc(2rem + 0.5vw);
+  } */
 
   input {
     font-size: calc(0.6rem + 0.5vw);
