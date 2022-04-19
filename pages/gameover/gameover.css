@@ -15,6 +15,21 @@
   --gray: #4b4b4b;
 }
 
+/* SHAKING ANIMATION  */
+@keyframes shaking {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(35deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(-35deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes glowing {
+  0% {background-color: var(--orange);}
+  50% {filter: brightness(0.8);}
+  100% {background-color: var(--orange);}
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -100,6 +115,10 @@ main {
   box-shadow: inset 0 0 0 1px var(--white), inset 0 0 0 3px var(--black);
 }
 
+.winnerCard {
+  animation: shaking 0.25s linear 2;
+}
+
 #player1Div {
   border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -128,6 +147,7 @@ button {
   font-weight: bold;
   z-index: 2;
   font-size: 1.1rem;
+  animation: glowing 2s ease-in-out infinite;
 }
 
 /* LANDSCAPE SCREEN */
@@ -151,7 +171,7 @@ button {
   button {    
     height: calc(5rem + 2vw);
     width: calc(5rem + 2vw);    
-    font-size: calc(1.2rem + 0.5vw);    
+    font-size: calc(1.2rem + 0.5vw);
   }
 
   button:hover {

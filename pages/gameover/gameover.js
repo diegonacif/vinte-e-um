@@ -18,6 +18,10 @@ const vCount2 = Number(localStorage.getItem("vCount2"));
 const player1Div = document.getElementById("player1Div");
 const player2Div = document.getElementById("player2Div");
 
+// Importanto Victory Cards
+const vCard1 = document.getElementById("vCount1Wp");
+const vCard2 = document.getElementById("vCount2Wp");
+
 // URL DINAMICA
 let url;
 if (window.location.origin === "https://diegonacif.github.io") {
@@ -61,7 +65,8 @@ function whoWon() {
   if ((player1Result < player2Result && player2Result <= 21) || player1Result > 21) {
     return (
       console.log(`${player2Name} venceu!`),
-      player2Div.className = `${player2Div.className} winner`
+      player2Div.className = `${player2Div.className} winner`,
+      vCard2.className = `${vCard2.className} winnerCard`
     )
   } else if (player1Result === player2Result) {
     return (
@@ -70,7 +75,8 @@ function whoWon() {
   } else if ((player2Result < player1Result && player1Result <= 21) || player2Result > 21) {
     return (
       console.log(`${player1Name} venceu!`),
-      player1Div.className = `${player1Div.className} winner`
+      player1Div.className = `${player1Div.className} winner`,
+      vCard1.className = `${vCard1.className} winnerCard`
     )
   } else {
     console.log("erro")
